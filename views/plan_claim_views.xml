@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_plan_claim_form" model="ir.ui.view">
+        <field name="name">plan.claim.form</field>
+        <field name="model">plan.claim</field>
+        <field name="arch" type="xml">
+            <form string="Claim">
+                <header>
+                    <button name="action_submit" string="Submit to QA/QC" type="object" class="btn-primary" invisible="state != 'draft'"
+                            groups="mrp_plan_order.group_plan_cs"/>
+                    <button name="action_approve" string="Approve" type="object" class="btn-primary" invisible="state != 'submitted'"
+                            groups="mrp_plan_order.group_plan_qa"/>
+                    <button name="action_reject" string="Reject" type="object" invisible="state != 'submitted'"
+                            groups="mrp_plan_order.group_plan_qa"/>
+                    <button name="action_draft" string="Reset to Draft" type="object" invisible="state not in ('submitted', 'rejected')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submitted,approved,planned,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group string="Customer">
+                            <field name="partner_id" readonly="state != 'draft'"/>
+                            <field name="sale_order_id" readonly="state != 'draft'"/>
+                            <field name="user_id"/>
+                            <field name="date_claim"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="QA/QC">
+                            <field name="claim_type" readonly="state not in ('draft', 'submitted')"/>
+                            <field name="need_plan" invisible="1"/>
+                            <field name="qa_user_id"/>
+                            <field name="qa_date"/>
+                            <field name="warehouse_id"/>
+                            <field name="date_expected"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Products to replace / repair" name="lines">
+                            <field name="line_ids" readonly="state not in ('draft', 'submitted')">
+                                <list editable="bottom">
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="product_id"/>
+                                    <field name="product_qty"/>
+                                    <field name="product_uom_id" groups="uom.group_uom"/>
+                                    <field name="action_type"/>
+                                    <field name="need_delivery"/>
+                                    <field name="description"/>
+                                    <field name="plan_qty"/>
+                                    <field name="plan_remaining_qty"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Description" name="desc">
+                            <group>
+                                <field name="description"/>
+                                <field name="qa_note"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_plan_claim_tree" model="ir.ui.view">
+        <field name="name">plan.claim.tree</field>
+        <field name="model">plan.claim</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state in ('done', 'rejected')">
+                <field name="name"/>
+                <field name="date_claim"/>
+                <field name="partner_id"/>
+                <field name="sale_order_id"/>
+                <field name="claim_type"/>
+                <field name="user_id"/>
+                <field name="qa_user_id"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_plan_claim" model="ir.actions.act_window">
+        <field name="name">Claims</field>
+        <field name="res_model">plan.claim</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

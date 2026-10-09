@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_plan_demand_form" model="ir.ui.view">
+        <field name="name">plan.demand.form</field>
+        <field name="model">plan.demand</field>
+        <field name="arch" type="xml">
+            <form string="Demand Order">
+                <header>
+                    <button name="action_confirm" string="Confirm" type="object" class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_draft" string="Reset to Draft" type="object" invisible="state not in ('confirmed', 'cancel')"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state not in ('draft', 'confirmed')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,planned,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="warehouse_id" readonly="state != 'draft'"/>
+                            <field name="user_id"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                            <field name="date_demand" readonly="state != 'draft'"/>
+                            <field name="origin"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Products" name="lines">
+                            <field name="line_ids" readonly="state != 'draft'">
+                                <list editable="bottom">
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="product_id"/>
+                                    <field name="product_qty"/>
+                                    <field name="product_uom_id" groups="uom.group_uom"/>
+                                    <field name="plan_qty"/>
+                                    <field name="plan_remaining_qty"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes"><field name="note"/></page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_plan_demand_tree" model="ir.ui.view">
+        <field name="name">plan.demand.tree</field>
+        <field name="model">plan.demand</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state in ('done', 'cancel')">
+                <field name="name"/>
+                <field name="date_demand"/>
+                <field name="warehouse_id"/>
+                <field name="user_id"/>
+                <field name="origin"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_plan_demand" model="ir.actions.act_window">
+        <field name="name">Demand Orders</field>
+        <field name="res_model">plan.demand</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+id,name,model_id,group_id/id,operation,domain
+access_plan_order_user,plan.order.user,plan.order,group_plan_user,cru,
+access_plan_order_manager,plan.order.manager,plan.order,group_plan_manager,crud,
+access_plan_order_line_user,plan.order.line.user,plan.order.line,group_plan_user,crud,
+access_plan_reservation_user,plan.reservation.user,plan.reservation,group_plan_user,crud,
+access_plan_reservation_stock,plan.reservation.stock,plan.reservation,stock.group_stock_user,r,
+access_plan_demand_user,plan.demand.user,plan.demand,group_plan_user,crud,
+access_plan_demand_line_user,plan.demand.line.user,plan.demand.line,group_plan_user,crud,
+access_plan_claim_cs,plan.claim.cs,plan.claim,group_plan_cs,cru,
+access_plan_claim_line_cs,plan.claim.line.cs,plan.claim.line,group_plan_cs,crud,
+access_plan_claim_planner,plan.claim.planner,plan.claim,group_plan_user,ru,
+access_plan_claim_line_planner,plan.claim.line.planner,plan.claim.line,group_plan_user,r,
+access_plan_claim_manager,plan.claim.manager,plan.claim,group_plan_manager,crud,
+access_plan_order_sale,plan.order.sale.read,plan.order,sales_team.group_sale_salesman,r,
+access_plan_order_line_sale,plan.order.line.sale.read,plan.order.line,sales_team.group_sale_salesman,r,
+access_plan_add_line_wizard,plan.add.line.wizard,plan.add.line.wizard,group_plan_user,crud,
+plan_order_company_rule,Plan Order: multi-company,plan.order,,crud,"[('company_id', 'in', company_ids + [False])]"
+plan_demand_company_rule,Demand Order: multi-company,plan.demand,,crud,"[('company_id', 'in', company_ids + [False])]"
+plan_claim_company_rule,Claim: multi-company,plan.claim,,crud,"[('company_id', 'in', company_ids + [False])]"

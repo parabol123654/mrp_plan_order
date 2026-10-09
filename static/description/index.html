@@ -1,0 +1,144 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Production Planning – Plan Order</h2>
+        <h3 class="oe_slogan">Group Sale Orders, forecast demand and customer claims into one plan. Hold stock per BOM level. Produce and buy only what is missing.</h3>
+        <div class="oe_span12">
+            <img class="oe_picture oe_screenshot" src="banner.png"/>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Why this module</h2>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                Built for furniture manufacturers: finished goods are painted / polished / upholstered
+                versions of <b>white (unfinished) components</b> kept in stock. Standard Odoo launches
+                MO / PO the moment a Sale Order is confirmed and has no notion of "this stock is earmarked
+                for that plan". This module adds the planning layer in between.
+            </p>
+        </div>
+        <div class="oe_span6">
+            <ul class="oe_mt32">
+                <li><b>Gate Sale Order confirmation</b> – no OUT / MO / PO until the planner runs a plan.</li>
+                <li><b>Three demand sources</b> – confirmed Sale Orders, Demand Orders (forecast, make-to-stock) and Customer Claims approved by QA/QC.</li>
+                <li><b>Hold stock per BOM level</b> – finished goods first, then the shortfall explodes to components, level by level.</li>
+                <li><b>Net shortfall only</b> – MO / PO are created for what is really missing, using your Inventory routes (Manufacture / Buy, 1-2-3 steps, vendors).</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Stock holds per BOM level</h2>
+        <div class="oe_span12">
+            <img class="oe_picture oe_screenshot" src="screenshot_holds.png"/>
+        </div>
+        <div class="oe_span12">
+            <p class="oe_mt32">
+                Holds are written directly on <code>stock.quant.reserved_quantity</code> using the same
+                core method as <code>stock.move._action_assign</code>. Inventory shows the correct
+                <i>Reserved</i> quantity, other plans see less free stock, but <b>no dummy moves or
+                pickings are created</b> – one call per product instead of one move per line per level.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Planner stays in control</h2>
+        <div class="oe_span6">
+            <h4>Real-life example</h4>
+            <p>
+                5 finished chairs are in stock and a Sale Order needs 5. The planner knows 2 of them are
+                showroom pieces / promised to another customer / in a colour about to be discontinued.
+                She sets the finished-good hold to <b>3</b>. The module immediately holds the extra white
+                frames and timber needed to <b>produce the 2 missing chairs</b>.
+            </p>
+            <p>
+                Later 10 more chairs are received. She raises the finished-good hold back to 5 and the
+                surplus component holds are <b>released for other plans</b>.
+            </p>
+        </div>
+        <div class="oe_span6">
+            <ul class="oe_mt32">
+                <li><b>Edit Quantity</b> on any hold line – decrease releases the difference, increase holds more if available.</li>
+                <li><b>Release / Hold</b> a whole line.</li>
+                <li><b>Cascade</b> – changing a hold on level <i>n</i> recomputes every level below it.</li>
+                <li><b>Recompute lower levels</b> keeps your finished-good decisions and recalculates components; <b>Re-reserve</b> starts from scratch.</li>
+                <li>Priority by line order: upper lines take stock first.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Run Plan</h2>
+        <div class="oe_span12">
+            <img class="oe_picture oe_screenshot" src="screenshot_running.png"/>
+        </div>
+        <div class="oe_span12">
+            <ol class="oe_mt32">
+                <li>Shortfall is computed from the current holds (what the planner released counts as missing).</li>
+                <li>Holds are released and, in the <b>same transaction</b>, the plan's own moves reserve the stock – nobody can grab it in between.</li>
+                <li>Sale Orders and Claims get an <b>OUT delivery</b> (moves are linked to the sale line: delivered quantity and invoicing work as usual). Forecast demand only produces into stock.</li>
+                <li>One procurement per missing product goes to WH/Stock; Odoo picks Manufacture or Buy from the product routes → MO / PO for the net quantity.</li>
+                <li>When an MO or a receipt is done, waiting moves of the same plan are reserved automatically.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Setup</h2>
+        <div class="oe_span12">
+            <ol>
+                <li>Planning ▸ Configuration ▸ Settings: keep <i>Gate SO procurement</i> enabled.</li>
+                <li>Products: route <b>Manufacture</b> or <b>Buy</b> (up to 19.0; on 20.0 Odoo picks it from the BoM / vendor). Do <b>not</b> use <i>Replenish on Order (MTO)</i> – the module nets the shortfall itself.</li>
+                <li>Assign users to <i>Planner</i>, <i>Planning Manager</i>, <i>Customer Service (Claim)</i>, <i>QA/QC</i>.</li>
+            </ol>
+            <p>Languages: English, Tiếng Việt. Available for Odoo 14.0, 15.0, 16.0, 17.0, 18.0, 19.0 and 20.0 Community — the same unit tests (SO gate, BOM-level hold, cascade, forecast, claim) run green on every version.</p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Kế hoạch sản xuất – Plan Order (Tiếng Việt)</h2>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                Gom <b>Sale Order đã xác nhận</b>, <b>Demand Order</b> (dự báo, sản xuất nhập kho) và
+                <b>Claim</b> (CS tạo, QA/QC duyệt) vào một Plan Order. Xác nhận plan → Odoo <b>giữ hàng
+                theo từng BOM level</b>: giữ thành phẩm trước, phần thiếu mới nổ xuống component trắng,
+                rồi nguyên liệu. Chạy plan → phiếu OUT giao khách, MO / PO <b>chỉ cho phần thiếu</b>.
+            </p>
+            <p>
+                Giữ hàng ghi thẳng lên <code>reserved_quantity</code> của quant (cùng hàm core mà
+                <code>_action_assign</code> dùng) nên Inventory hiện Reserved đúng, không tạo move / phiếu giả,
+                nhanh hơn nhiều so với cách tạo từng move của OCA <code>stock_reserve</code>.
+            </p>
+        </div>
+        <div class="oe_span6">
+            <h4>Ví dụ thực tế</h4>
+            <p>
+                Kho có 5 ghế thành phẩm, đơn hàng cần 5. Planner biết 2 cái là hàng showroom / đã hứa cho
+                khách khác / màu cũ sắp đổi → chỉnh giữ còn <b>3</b>. Module tự giữ thêm khung trắng và gỗ
+                để <b>sản xuất mới 2 cái</b>.
+            </p>
+            <p>
+                Ngược lại, vừa nhập kho thêm ghế → planner tăng giữ thành phẩm → nhu cầu component giảm →
+                module <b>nhả component</b> ra cho plan khác dùng.
+            </p>
+            <ul>
+                <li>Sửa số lượng giữ trực tiếp trên từng dòng, Release / Hold cả dòng.</li>
+                <li>Sửa ở level cha → tự tính lại toàn bộ level con.</li>
+                <li><i>Tính lại level dưới</i> giữ nguyên quyết định ở thành phẩm; <i>Giữ lại từ đầu</i> làm lại theo tồn kho.</li>
+            </ul>
+        </div>
+    </div>
+</section>

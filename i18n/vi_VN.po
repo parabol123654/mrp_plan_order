@@ -1,0 +1,1466 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_plan_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-25 07:27+0000\n"
+"PO-Revision-Date: 2026-09-25 07:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_reservation.py:0
+#, python-format
+msgid "%s: no stock available to hold again."
+msgstr "%s: không còn hàng available để hold lại."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_reservation.py:0
+#, python-format
+msgid "%s: only %s available at %s, cannot hold %s more."
+msgstr "%s: chỉ còn %s available tại %s, không thể hold thêm %s."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order_line.py:0
+#, python-format
+msgid "A Claim line must be selected for source type Claim."
+msgstr "Line nguồn Claim phải chọn Claim Line."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order_line.py:0
+#, python-format
+msgid "A Demand line must be selected for source type Forecast."
+msgstr "Line nguồn Forecast phải chọn Demand Line."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order_line.py:0
+#, python-format
+msgid "A Sale Order line must be selected for source type Sale Order."
+msgstr "Line nguồn Sale Order phải chọn Sale Order Line."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_needaction
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_needaction
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__action_type
+msgid "Action Type"
+msgstr "Loại xử lý"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__activity_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__activity_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__activity_exception_decoration
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__activity_exception_decoration
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__activity_state
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__activity_state
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__activity_type_icon
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__activity_type_icon
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Add SO / Claim / Demand"
+msgstr "Thêm SO / Claim / Demand"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_plan_add_line_wizard
+msgid "Add demand lines to Plan Order"
+msgstr "Thêm dòng nhu cầu vào Plan Order"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_add_line_wizard_form
+msgid "Add demand to plan"
+msgstr "Thêm nhu cầu vào plan"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_add_line_wizard_form
+msgid "Add to plan"
+msgstr "Thêm vào plan"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_claim_form
+msgid "Approve"
+msgstr "Duyệt"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__state__approved
+msgid "Approved"
+msgstr "Đã duyệt"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_attachment_count
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_attachment_count
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__bom_level
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_reservation_search
+msgid "BOM level"
+msgstr "BOM level"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__user_id
+msgid "CS"
+msgstr "CS"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_add_line_wizard_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_demand_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Cancel"
+msgstr "Huỷ"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_demand__state__cancel
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_order__state__cancel
+msgid "Cancelled"
+msgstr "Đã huỷ"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid "Cannot reset to Draft from the current state."
+msgstr "Không thể quay về Draft từ trạng thái hiện tại."
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Check done"
+msgstr "Kiểm tra hoàn tất"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__claim_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__claim_id
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_order_line__source_type__claim
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_claim_form
+msgid "Claim"
+msgstr "Claim"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_add_line_wizard__source_type__claim
+msgid "Claim (approved)"
+msgstr "Claim (đã duyệt)"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_plan_claim_line
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__claim_line_id
+msgid "Claim Line"
+msgstr "Dòng claim"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__claim_line_ids
+msgid "Claim Lines"
+msgstr "Dòng claim"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__claim_type
+msgid "Claim type"
+msgstr "Loại claim"
+
+#. module: mrp_plan_order
+#: model:ir.actions.act_window,name:mrp_plan_order.action_plan_claim
+#: model:ir.ui.menu,name:mrp_plan_order.menu_plan_claim
+msgid "Claims"
+msgstr "Claim"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__company_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__company_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__company_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__company_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__company_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__company_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__company_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập"
+
+#. module: mrp_plan_order
+#: model:ir.ui.menu,name:mrp_plan_order.menu_plan_config
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_demand_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Confirm & Hold stock"
+msgstr "Xác nhận & Giữ hàng"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_demand__state__confirmed
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_search
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_order__state__confirmed
+msgid "Confirmed (stock held)"
+msgstr "Đã xác nhận (đang giữ hàng)"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.res_config_settings_view_form_plan
+msgid ""
+"Confirming a Sale Order will not create OUT / MO / PO; procurements only run"
+" when the planner runs a Plan Order."
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_reservation__state__consumed
+msgid "Consumed by plan"
+msgstr "Đã dùng khi chạy plan"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__create_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__create_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__create_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__create_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__create_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__create_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__create_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__create_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__create_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__create_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__create_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__create_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__create_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__create_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__claim_type__credit
+msgid "Credit note"
+msgstr "Credit note"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__claim_type__credit_replace
+msgid "Credit note + Replace/Repair"
+msgstr "Credit note + Thay/Sửa"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__partner_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__partner_id
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_claim_form
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_plan_claim
+msgid "Customer Claim"
+msgstr "Claim khách hàng"
+
+#. module: mrp_plan_order
+#: model:res.groups,name:mrp_plan_order.group_plan_cs
+msgid "Customer Service (Claim)"
+msgstr "Chăm sóc khách hàng (Claim)"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__date_claim
+msgid "Date Claim"
+msgstr "Ngày claim"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__date_demand
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__date_demand
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__date_planned
+msgid "Date Needed"
+msgstr "Ngày cần hàng"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__date_plan
+msgid "Date Plan"
+msgstr "Ngày lập plan"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__date_run
+msgid "Date Run"
+msgstr "Ngày chạy"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_reservation__product_uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "Đơn vị mặc định dùng cho mọi nghiệp vụ kho."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__description
+msgid "Defect Description"
+msgstr "Mô tả lỗi"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__need_delivery
+msgid "Deliver to Customer"
+msgstr "Giao cho khách"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__demand_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__demand_id
+msgid "Demand"
+msgstr "Nhu cầu"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_demand.py:0
+#, python-format
+msgid "Demand %s has no lines."
+msgstr "Demand %s chưa có dòng nào."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_order_line__source_type__forecast
+msgid "Demand / Forecast"
+msgstr "Nhu cầu / Dự báo"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_add_line_wizard__source_type__forecast
+msgid "Demand / Forecast (confirmed)"
+msgstr "Nhu cầu / Dự báo (đã xác nhận)"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__demand_line_id
+msgid "Demand Line"
+msgstr "Dòng nhu cầu"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__demand_line_ids
+msgid "Demand Lines"
+msgstr "Dòng nhu cầu"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_demand_form
+msgid "Demand Order"
+msgstr "Demand Order"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_plan_demand
+msgid "Demand Order (Forecast)"
+msgstr "Demand Order (Dự báo)"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_plan_demand_line
+msgid "Demand Order Line"
+msgstr "Dòng Demand Order"
+
+#. module: mrp_plan_order
+#: model:ir.actions.act_window,name:mrp_plan_order.action_plan_demand
+#: model:ir.ui.menu,name:mrp_plan_order.menu_plan_demand
+msgid "Demand Orders"
+msgstr "Demand Order"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Demand lines"
+msgstr "Dòng nhu cầu"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__description
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_claim_form
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_mrp_production__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_res_company__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_stock_move__display_name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_stock_rule__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__state__done
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_demand__state__done
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_order__state__done
+msgid "Done"
+msgstr "Hoàn tất"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__state__draft
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_demand__state__draft
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_order__state__draft
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_search
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__date_expected
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__date_expected
+msgid "Expected Delivery Date"
+msgstr "Ngày giao dự kiến"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__qty_reserved
+msgid "FG Held"
+msgstr "FG đã hold"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__qty_short
+msgid "FG Short"
+msgstr "FG thiếu"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_follower_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_follower_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_channel_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_channel_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_partner_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_partner_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__activity_type_icon
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__activity_type_icon
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__origin
+msgid "Forecast Source"
+msgstr "Nguồn forecast"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_res_company__plan_gate_sale_procurement
+#: model:ir.model.fields,field_description:mrp_plan_order.field_res_config_settings__plan_gate_sale_procurement
+msgid "Gate SO procurement (run through Plan Order)"
+msgstr "Chặn SO tự sinh MO/PO (chạy qua Plan Order)"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_search
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_reservation_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_reservation_tree
+msgid "Hold"
+msgstr "Giữ"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_tree
+msgid "Holds"
+msgstr "Giữ"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_reservation.py:0
+#, python-format
+msgid "Holds can only be re-held while the Plan Order is Confirmed."
+msgstr "Chỉ hold lại khi Plan Order ở trạng thái Confirmed."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_reservation.py:0
+#, python-format
+msgid "Holds can only be released while the Plan Order is Confirmed."
+msgstr "Chỉ nhả hold khi Plan Order ở trạng thái Confirmed."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_mrp_production__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_res_company__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_res_config_settings__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_sale_order_line__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_stock_move__id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_stock_rule__id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__activity_exception_icon
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__activity_exception_icon
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__activity_exception_icon
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__activity_exception_icon
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__message_needaction
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__message_unread
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__message_needaction
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__message_unread
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__message_needaction
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__message_has_error
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__message_has_sms_error
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__message_has_error
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__message_has_sms_error
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__message_has_error
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_reservation__quant_id
+msgid "Informational only; quants may be merged by the cron."
+msgstr "Chỉ để tham khảo; quant có thể bị merge bởi cron."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_is_follower
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_is_follower
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid ""
+"Keep finished-good holds (level 0) as adjusted, recompute component holds on"
+" lower levels."
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_mrp_production____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_purchase_order_line____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_res_company____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_sale_order_line____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_stock_move____last_update
+#: model:ir.model.fields,field_description:mrp_plan_order.field_stock_rule____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__write_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__write_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__write_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__write_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__write_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__write_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__write_uid
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__write_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__write_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__write_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__write_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__write_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__write_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__write_date
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__line_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__line_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__line_ids
+msgid "Line"
+msgstr "Dòng"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__line_count
+msgid "Line Count"
+msgstr "Số dòng"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_tree
+msgid "Lines"
+msgstr "Dòng"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/wizard/plan_add_line_wizard.py:0
+#, python-format
+msgid "Lines can only be added while the Plan Order is in Draft."
+msgstr "Chỉ thêm dòng khi Plan Order ở trạng thái Draft."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__location_id
+msgid "Location"
+msgstr "Vị trí"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__lot_id
+msgid "Lot"
+msgstr "Lô"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_tree
+msgid "MO"
+msgstr "MO"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_main_attachment_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_main_attachment_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid "Manufacturing Orders"
+msgstr "Lệnh sản xuất"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_has_error
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_has_error
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__move_ids
+msgid "Move"
+msgstr "Dịch chuyển"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__my_activity_date_deadline
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__my_activity_date_deadline
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_search
+msgid "My plans"
+msgstr "Plan của tôi"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__name
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__need_delivery
+msgid "Need Delivery"
+msgstr "Cần giao"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__need_plan
+msgid "Need Plan"
+msgstr "Cần plan"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__activity_date_deadline
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__activity_date_deadline
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__activity_summary
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__activity_summary
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__activity_type_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__activity_type_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__note
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_demand_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_needaction_counter
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_needaction_counter
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_has_error_counter
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_has_error_counter
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__message_needaction_counter
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__message_needaction_counter
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__message_has_error_counter
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__message_has_error_counter
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__message_unread_counter
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__message_unread_counter
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim_line__need_delivery
+msgid ""
+"On: Run Plan creates an OUT delivery to the customer. Off: only produce / "
+"repair into stock."
+msgstr ""
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid "Only Draft / Cancelled Plan Orders can be deleted."
+msgstr "Chỉ xoá Plan Order ở trạng thái Draft / Cancelled."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid "Only Draft Plan Orders can be confirmed."
+msgstr "Chỉ confirm Plan Order ở trạng thái Draft."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_reservation__plan_line_id
+msgid "Only set on level 0 (finished good of the plan line)."
+msgstr "Chỉ set cho level 0 (thành phẩm của plan line)."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__sale_order_id
+msgid "Order Reference"
+msgstr "Số đơn"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__origin
+msgid "Origin"
+msgstr "Nguồn"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__sale_order_id
+msgid "Original Sale Order"
+msgstr "Sale Order gốc"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__owner_id
+msgid "Owner"
+msgstr "Chủ sở hữu"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_tree
+msgid "PO"
+msgstr "PO"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__package_id
+msgid "Package"
+msgstr "Kiện"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__picking_ids
+msgid "Picking"
+msgstr "Phiếu kho"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__picking_count
+msgid "Picking Count"
+msgstr "Số phiếu kho"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__plan_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__plan_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__plan_id
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_reservation_search
+msgid "Plan"
+msgstr "Plan"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__plan_line_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__plan_line_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__plan_line_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_sale_order_line__plan_line_ids
+msgid "Plan Line"
+msgstr "Dòng plan"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_mrp_production__plan_order_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_purchase_order_line__plan_order_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_stock_move__plan_order_id
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Plan Order"
+msgstr "Plan Order"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_plan_order_line
+msgid "Plan Order Line"
+msgstr "Dòng Plan Order"
+
+#. module: mrp_plan_order
+#: model:ir.actions.act_window,name:mrp_plan_order.action_plan_order
+#: model:ir.ui.menu,name:mrp_plan_order.menu_plan_order
+msgid "Plan Orders"
+msgstr "Plan Order"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_plan_reservation
+msgid "Plan Stock Reservation (hold)"
+msgstr "Giữ hàng theo plan"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__state__planned
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_demand__state__planned
+msgid "Planned"
+msgstr "Đã lên plan"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__plan_qty
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__plan_qty
+#: model:ir.model.fields,field_description:mrp_plan_order.field_sale_order_line__plan_qty
+msgid "Planned Qty"
+msgstr "Đã plan"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__user_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__user_id
+#: model:res.groups,name:mrp_plan_order.group_plan_user
+msgid "Planner"
+msgstr "Planner"
+
+#. module: mrp_plan_order
+#: model:ir.ui.menu,name:mrp_plan_order.menu_plan_root
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.res_config_settings_view_form_plan
+msgid "Planning"
+msgstr "Planning"
+
+#. module: mrp_plan_order
+#: model:res.groups,name:mrp_plan_order.group_plan_manager
+msgid "Planning Manager"
+msgstr "Quản lý kế hoạch"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__procurement_group_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__procurement_group_id
+msgid "Procurement Group"
+msgstr "Nhóm cung ứng"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__product_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__product_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__product_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__product_id
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_search
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_reservation_search
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__product_uom
+msgid "Product Uom"
+msgstr "Đơn vị"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__production_ids
+msgid "Production"
+msgstr "Sản xuất"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__production_count
+msgid "Production Count"
+msgstr "Số MO"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_mrp_production
+msgid "Production Order"
+msgstr "Lệnh sản xuất"
+
+#. module: mrp_plan_order
+#: model:ir.module.category,name:mrp_plan_order.module_category_planning
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.res_config_settings_view_form_plan
+msgid "Production Planning"
+msgstr "Kế hoạch sản xuất"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_demand_form
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_claim_form
+msgid "Products to replace / repair"
+msgstr "Sản phẩm thay / sửa"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__purchase_ids
+msgid "Purchase"
+msgstr "Mua hàng"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__purchase_count
+msgid "Purchase Count"
+msgstr "Số PO"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Dòng đơn mua"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid "Purchase Orders"
+msgstr "Đơn mua"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__qa_user_id
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_claim_form
+msgid "QA/QC"
+msgstr "QA/QC"
+
+#. module: mrp_plan_order
+#: model:res.groups,name:mrp_plan_order.group_plan_qa
+msgid "QA/QC (Approve claim)"
+msgstr "QA/QC (duyệt claim)"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__qa_note
+msgid "QA/QC Conclusion"
+msgstr "Kết luận QA/QC"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_claim.py:0
+#, python-format
+msgid "QA/QC must set the Claim type before approving."
+msgstr "QA/QC phải chọn Claim type trước khi duyệt."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__qa_date
+msgid "Qa Date"
+msgstr "Ngày QA duyệt"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__quant_id
+msgid "Quant"
+msgstr "Quant"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__product_qty
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__product_qty
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__product_qty
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__quantity_released
+msgid "Quantity Released"
+msgstr "Số lượng đã nhả"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_reservation.py:0
+#, python-format
+msgid "Quantity can only be edited on a Reserved line."
+msgstr "Chỉ sửa số lượng trên dòng đang Reserved."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_reservation.py:0
+#, python-format
+msgid "Quantity can only be edited while the Plan Order is Confirmed."
+msgstr "Chỉ sửa số lượng khi Plan Order ở trạng thái Confirmed."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_reservation.py:0
+#, python-format
+msgid "Quantity cannot be negative."
+msgstr "Số lượng không được âm."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_reservation__quantity
+msgid "Quantity currently held, in the product UoM."
+msgstr "Số lượng đang hold, tính theo UoM của product."
+
+#. module: mrp_plan_order
+#: model:ir.model.constraint,message:mrp_plan_order.constraint_plan_order_line_qty_positive
+msgid "Quantity must be positive."
+msgstr "Số lượng phải > 0."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_reservation__quantity_released
+msgid "Quantity released last time (used by Hold)."
+msgstr "Số lượng đã nhả lần cuối (để Hold lại)."
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Re-reserve"
+msgstr "Giữ lại từ đầu"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid "Re-reserve is only possible while the Plan Order is Confirmed."
+msgstr "Chỉ re-reserve khi Plan Order ở trạng thái Confirmed."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid "Recompute is only possible while the Plan Order is Confirmed."
+msgstr "Chỉ tính lại khi Plan Order ở trạng thái Confirmed."
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Recompute lower levels"
+msgstr "Tính lại level dưới"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_claim_form
+msgid "Reject"
+msgstr "Từ chối"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__state__rejected
+msgid "Rejected"
+msgstr "Từ chối"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_reservation_tree
+msgid "Release"
+msgstr "Nhả"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Release all holds"
+msgstr "Nhả toàn bộ"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid ""
+"Release everything and hold again from current stock (manual adjustments are"
+" lost). Continue?"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_reservation__state__released
+msgid "Released"
+msgstr "Đã nhả"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__plan_remaining_qty
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__plan_remaining_qty
+msgid "Remaining Qty"
+msgstr "Còn lại"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__claim_type__repair
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim_line__action_type__repair
+msgid "Repair"
+msgstr "Sửa"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim_line__action_type__replace
+msgid "Replace"
+msgstr "Thay"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__claim_type__replace_repair
+msgid "Replace + Repair"
+msgstr "Thay + Sửa"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__claim_type__replace
+msgid "Replace component / product"
+msgstr "Thay component / sản phẩm"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__reservation_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__reservation_ids
+msgid "Reservation"
+msgstr "Giữ hàng"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__reservation_count
+msgid "Reservation Count"
+msgstr "Số dòng giữ"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_reservation__state__reserved
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_reservation_search
+msgid "Reserved"
+msgstr "Đang giữ"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_claim_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_demand_form
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Reset to Draft"
+msgstr "Về Draft"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__activity_user_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__activity_user_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__activity_user_id
+msgid "Responsible User"
+msgstr "Người phụ trách"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Run Plan"
+msgstr "Chạy kế hoạch"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid "Run Plan is only possible while the Plan Order is Confirmed."
+msgstr "Chỉ Run Plan khi Plan Order ở trạng thái Confirmed."
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid ""
+"Run Plan releases the holds, creates OUT / MO / PO and reserves them "
+"immediately. Continue?"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_order__state__running
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_search
+msgid "Running"
+msgstr "Đang chạy"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_has_sms_error
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_has_sms_error
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__sale_line_id
+msgid "Sale Line"
+msgstr "Dòng đơn bán"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_order_line__source_type__sale
+msgid "Sale Order"
+msgstr "Đơn bán"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_add_line_wizard__source_type__sale
+msgid "Sale Order (confirmed)"
+msgstr "Đơn bán (đã xác nhận)"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__sale_line_ids
+msgid "Sale Order Lines"
+msgstr "Dòng đơn bán"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Dòng đơn bán"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__sequence
+msgid "Sequence"
+msgstr "Thứ tự"
+
+#. module: mrp_plan_order
+#: model:ir.actions.act_window,name:mrp_plan_order.action_plan_config_settings
+#: model:ir.ui.menu,name:mrp_plan_order.menu_plan_settings
+msgid "Settings"
+msgstr "Thiết lập"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_add_line_wizard__source_type
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__source_type
+msgid "Source Type"
+msgstr "Loại nguồn"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__state
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__state
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__state
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__state
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__state
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__state
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_search
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__activity_state
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__activity_state
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: mrp_plan_order
+#: model:ir.model,name:mrp_plan_order.model_stock_rule
+msgid "Stock Rule"
+msgstr "Quy tắc kho"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#: model:ir.actions.act_window,name:mrp_plan_order.action_plan_reservation
+#: model:ir.ui.menu,name:mrp_plan_order.menu_plan_reservation
+#, python-format
+msgid "Stock holds"
+msgstr "Hàng đang giữ"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+msgid "Stock holds (BOM level)"
+msgstr "Hàng đang giữ (theo BOM level)"
+
+#. module: mrp_plan_order
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_claim_form
+msgid "Submit to QA/QC"
+msgstr "Gửi QA/QC"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields.selection,name:mrp_plan_order.selection__plan_claim__state__submitted
+msgid "Submitted"
+msgstr "Đã gửi"
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid "The Plan Order has no lines."
+msgstr "Plan Order chưa có dòng nào."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#, python-format
+msgid ""
+"The plan is running: cancel the related MO / PO / transfers first, then "
+"cancel the plan."
+msgstr ""
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_claim.py:0
+#, python-format
+msgid "This claim requires production / repair but has no product lines."
+msgstr "Claim cần sản xuất/sửa nhưng chưa có dòng sản phẩm."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_demand.py:0
+#, python-format
+msgid ""
+"This demand is already planned in a Plan Order and cannot be cancelled."
+msgstr ""
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order_line.py:0
+#, python-format
+msgid "Total planned quantity of %s (%s) exceeds the source quantity (%s)."
+msgstr "Tổng số lượng plan của %s (%s) vượt số lượng nguồn (%s)."
+
+#. module: mrp_plan_order
+#: code:addons/mrp_plan_order/models/plan_order.py:0
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_form
+#, python-format
+msgid "Transfers"
+msgstr "Phiếu kho"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__activity_exception_decoration
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__activity_exception_decoration
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__product_uom_id
+msgid "Unit of Measure"
+msgstr "Đơn vị"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_sale_order_line__plan_remaining_qty
+msgid "Unplanned Qty"
+msgstr "Chưa plan"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_unread
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_unread
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__message_unread_counter
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__message_unread_counter
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__product_uom_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__product_uom_id
+msgid "UoM"
+msgstr "Đơn vị"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order_line__sequence
+msgid "Upper lines take stock first when reserving."
+msgstr "Line trên lấy hàng trước khi reserve."
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_reservation__parent_product_id
+msgid "Used For (parent)"
+msgstr "Dùng cho (cha)"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__warehouse_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim_line__warehouse_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__warehouse_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand_line__warehouse_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__warehouse_id
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order_line__warehouse_id
+#: model_terms:ir.ui.view,arch_db:mrp_plan_order.view_plan_order_search
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_claim__website_message_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_demand__website_message_ids
+#: model:ir.model.fields,field_description:mrp_plan_order.field_plan_order__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_claim__website_message_ids
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_demand__website_message_ids
+#: model:ir.model.fields,help:mrp_plan_order.field_plan_order__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: mrp_plan_order
+#: model:ir.model.fields,help:mrp_plan_order.field_res_company__plan_gate_sale_procurement
+#: model:ir.model.fields,help:mrp_plan_order.field_res_config_settings__plan_gate_sale_procurement
+msgid ""
+"When enabled, confirming a Sale Order does NOT launch stock rules. "
+"Procurements are created only when the planner runs the Plan Order."
+msgstr ""

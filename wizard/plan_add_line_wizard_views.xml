@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_plan_add_line_wizard_form" model="ir.ui.view">
+        <field name="name">plan.add.line.wizard.form</field>
+        <field name="model">plan.add.line.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Add demand to plan">
+                <group>
+                    <field name="plan_id" readonly="1"/>
+                    <field name="company_id" invisible="1"/>
+                    <field name="source_type" widget="radio"/>
+                </group>
+                <field name="sale_line_ids" invisible="source_type != 'sale'">
+                    <list create="false">
+                        <field name="company_id" invisible="1"/>
+                        <field name="order_id"/>
+                        <field name="order_partner_id"/>
+                        <field name="product_id"/>
+                        <field name="product_uom_qty"/>
+                        <field name="plan_remaining_qty"/>
+                        <field name="product_uom_id"/>
+                    </list>
+                </field>
+                <field name="claim_line_ids" invisible="source_type != 'claim'">
+                    <list create="false">
+                        <field name="company_id" invisible="1"/>
+                        <field name="claim_id"/>
+                        <field name="partner_id"/>
+                        <field name="product_id"/>
+                        <field name="action_type"/>
+                        <field name="need_delivery"/>
+                        <field name="plan_remaining_qty"/>
+                        <field name="product_uom_id"/>
+                    </list>
+                </field>
+                <field name="demand_line_ids" invisible="source_type != 'forecast'">
+                    <list create="false">
+                        <field name="company_id" invisible="1"/>
+                        <field name="demand_id"/>
+                        <field name="product_id"/>
+                        <field name="date_demand"/>
+                        <field name="plan_remaining_qty"/>
+                        <field name="product_uom_id"/>
+                    </list>
+                </field>
+                <footer>
+                    <button name="action_add" string="Add to plan" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

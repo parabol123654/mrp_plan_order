@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- 19.0+: res.groups.privilege replaces ir.module.category on groups -->
+        <record id="res_groups_privilege_planning" model="res.groups.privilege">
+            <field name="name">Production Planning</field>
+            <field name="sequence">25</field>
+            <field name="category_id" ref="base.module_category_supply_chain"/>
+        </record>
+
+        <record id="group_plan_user" model="res.groups">
+            <field name="name">Planner</field>
+            <field name="sequence">10</field>
+            <field name="privilege_id" ref="res_groups_privilege_planning"/>
+            <field name="implied_ids" eval="[(4, ref('stock.group_stock_user')), (4, ref('mrp.group_mrp_user'))]"/>
+        </record>
+
+        <record id="group_plan_manager" model="res.groups">
+            <field name="name">Planning Manager</field>
+            <field name="sequence">20</field>
+            <field name="privilege_id" ref="res_groups_privilege_planning"/>
+            <field name="implied_ids" eval="[(4, ref('group_plan_user'))]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+
+        <record id="res_groups_privilege_claim" model="res.groups.privilege">
+            <field name="name">Customer Claims</field>
+            <field name="sequence">26</field>
+            <field name="category_id" ref="base.module_category_supply_chain"/>
+        </record>
+
+        <record id="group_plan_cs" model="res.groups">
+            <field name="name">Customer Service (Claim)</field>
+            <field name="sequence">10</field>
+            <field name="privilege_id" ref="res_groups_privilege_claim"/>
+        </record>
+
+        <record id="group_plan_qa" model="res.groups">
+            <field name="name">QA/QC (Approve claim)</field>
+            <field name="sequence">20</field>
+            <field name="privilege_id" ref="res_groups_privilege_claim"/>
+            <field name="implied_ids" eval="[(4, ref('group_plan_cs'))]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_plan_order" model="ir.sequence">
+            <field name="name">Plan Order</field>
+            <field name="code">plan.order</field>
+            <field name="prefix">PLAN/%(year)s/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="seq_plan_demand" model="ir.sequence">
+            <field name="name">Demand Order</field>
+            <field name="code">plan.demand</field>
+            <field name="prefix">DMD/%(year)s/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="seq_plan_claim" model="ir.sequence">
+            <field name="name">Claim</field>
+            <field name="code">plan.claim</field>
+            <field name="prefix">CLM/%(year)s/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

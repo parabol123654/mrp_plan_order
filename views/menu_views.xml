@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_plan_root" name="Planning" sequence="45" web_icon="mrp_plan_order,static/description/icon.png"
+              groups="mrp_plan_order.group_plan_user,mrp_plan_order.group_plan_cs"/>
+
+    <menuitem id="menu_plan_order" name="Plan Orders" parent="menu_plan_root" action="action_plan_order"
+              sequence="10" groups="mrp_plan_order.group_plan_user"/>
+    <menuitem id="menu_plan_demand" name="Demand Orders" parent="menu_plan_root" action="action_plan_demand"
+              sequence="20" groups="mrp_plan_order.group_plan_user"/>
+    <menuitem id="menu_plan_claim" name="Claims" parent="menu_plan_root" action="action_plan_claim"
+              sequence="30" groups="mrp_plan_order.group_plan_cs,mrp_plan_order.group_plan_user"/>
+    <menuitem id="menu_plan_reservation" name="Stock holds" parent="menu_plan_root" action="action_plan_reservation"
+              sequence="40" groups="mrp_plan_order.group_plan_user"/>
+    <menuitem id="menu_plan_config" name="Configuration" parent="menu_plan_root" sequence="90"
+              groups="mrp_plan_order.group_plan_manager"/>
+    <menuitem id="menu_plan_settings" name="Settings" parent="menu_plan_config" action="action_plan_config_settings"
+              sequence="10" groups="mrp_plan_order.group_plan_manager"/>
+</odoo>
